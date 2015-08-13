@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -38,6 +39,16 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
+mongoose.connect(config.databases.mongo.primary, function(err){
+  if(err){
+    Log.e(err);
+  }else{
+    Log.i("Connection to mongoDB successful");
+  }
+
+});
+
+
 
 // development error handler
 // will print stacktrace

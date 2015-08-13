@@ -5,6 +5,7 @@ var OrderSchema = new mongoose.Schema({
     user_name : String,
     qty : Number,
     desc : String,
+    status : String,
     updated_at : { type : Date , default: Date.now()}
 
 });
