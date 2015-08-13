@@ -3,46 +3,46 @@ var router = express.Router();
 
 var mongoose = require('mongoose');
 
-var Product = require("../models/User.js");
+var Product = require("../models/Product.js");
 
-// get the users
+// get the products
 router.get('/', function(req, res, next){
-  Log.i("return the list of users");
-  res.status(200).json({
-    "success" : "TODO : List of users"
-  })
+    Log.i("return the list of products");
+    res.status(200).json({
+        "success" : "TODO : List of products"
+    })
 });
 
-// get the user with given id
+// get the product with given id
 router.get('/:id', function(req, res, next) {
-  Log.i("get user by id "+req.params.id);
-  res.status(200).json({
-    "success" : "TODO : get user by id"
-  })
+    Log.i("get product by id "+req.params.id);
+    res.status(200).json({
+        "success" : "TODO : get product by id"
+    })
 });
 
-// create a new user
+// create a new product
 router.post('/', function(req, res, next) {
-  Log.i("create a new user");
-  res.status(201).json({
-    "success" : "TODO : create a new user"
-  })
+    Log.i("create a new product");
+    res.status(201).json({
+        "success" : "TODO : create a new product"
+    })
 });
 
-//update a user
+//update a product
 router.put('/:id', function(req, res, next) {
-  Log.i("update the user with id "+req.params.id);
-  res.status(202).json({
-    "success" : "TODO : update user"
-  })
+    Log.i("update the product with id "+req.params.id);
+    res.status(202).json({
+        "success" : "TODO : update product"
+    })
 });
 
-// delete a user
+// delete a product
 router.delete('/:id', function(req, res, next) {
-  Log.i("delete the user with id "+req.params.id);
-  res.status(204).json({
-    "success" : "delete user"
-  })
+    Log.i("delete the product with id "+req.params.id);
+    res.status(204).json({
+        "success" : "delete product"
+    })
 });
 
 //
