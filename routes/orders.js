@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Order = require("../models/Order.js");
+var Order = require("./../models/Order");
 
 // get the orders
 router.get('/', function(req, res, next){

@@ -3,7 +3,7 @@ var router = express.Router();
 
 var mongoose = require('mongoose');
 
-var User = require("../models/User.js");
+var User = require("./../models/User");
 
 // get the users
 router.get('/', function(req, res, next){
